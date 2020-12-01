@@ -5,6 +5,17 @@ let endY = 300;
 let colr = false;
 let mes = "Click for color"
 
+class point {
+
+  constructor(sx, sy, ex, ey) {
+    this.sx = sx;
+    this.sy = sy;
+    this.ex = ex;
+    this.ey = ey;
+  }
+  
+}
+
 function setup() {
     createCanvas(1000, 600);
     background(0);
@@ -16,7 +27,7 @@ function setup() {
 }
 
 function draw(){
-
+    let temp = [];
     while (endX < 1000){
 
         endX = startX + random(0, 9);
@@ -27,13 +38,18 @@ function draw(){
           line(startX, startY, endX, endY);         
         }
         else{
-            let colr = endY;
-            colr = int(abs(colr - 300) * .85);
-            stroke(colr);
-            line(startX, startY, endX, endY);
+            var p = new point(startX, startY, endX, endY);
+            temp.push(p);
         }
         startX = endX;
         startY = endY;
+    }
+    let colrs = endY;
+    colrs = int(abs(colrs - 300) * .85);
+    stroke(colrs);
+    for(let i = 0; i < temp.length; i++)
+    {
+        line(temp[i].sx, temp[i].sy, temp[i].ex, temp[i].ey);
     }
 
     startX = 0;
