@@ -1,0 +1,211 @@
+/*--------------------------------------
+Table of contents
+1. menu
+2. page layout with flex box
+3. text and image format classes
+4. js file fomatting
+--------------------------------------
+*/
+
+/*menu*/
+/*banner and nested menu*/
+
+.proBox {
+  color: #f6f7f8;
+  background: #12a4d9;
+  border: 3px solid #e2d810;
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 0px;
+    width: 0px; 
+  }
+
+  to {
+    margin-left: 35%;
+    width: 30%;     
+  }
+}
+#bannerimg {
+    width: 100%;
+    height: 10vw;
+}
+
+#main-nav {
+    margin-top: 2px;
+    width: 95%;
+}
+
+#main-nav a {
+    color: #f6f7f8;
+    background: #12a4d9;
+    border: 3px solid #e2d810;
+    height: 70px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+}
+
+#main-nav a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+#main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#main-nav li {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#main-nav li:hover .submenu > li {
+    display: block;
+    flex-direction: column;
+    top: 0px;
+}
+
+.submenu li {
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li:hover .submenu-2 li {
+    display: block;
+}
+
+.submenu-2 li {
+    display: none;
+}
+
+.submenu-2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 75%;
+    width: 250px;
+}
+
+.arrow {
+    margin-left: 8px;
+    color: rgb(63, 255, 143);
+    font-size: 12px;
+}
+
+h1 {
+    font-family: lato;
+    font-size: 72px;
+}
+
+
+/*page layout with flexbox*/
+.flexbox-container {
+   margin: auto;
+    width: 100%;
+    background: #12a4d9;
+    display: flex;
+    border: 3px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-content: space-around;
+
+}
+
+.flexbox-item {
+    color: #e2d810;
+    width: 200px;
+    margin: 5px;
+    padding: 10px;
+    border: 4px solid white;
+    background-color: #322e2f;
+    font-size: 28px;
+}
+
+.flexbox-item-1 {
+    min-height: 150px;
+    font-family: 'Bangers', cursive;
+    font-size: 26px;
+}
+
+.flexbox-item-2 {
+   font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 200px;
+    flex: 1;
+    align-self: center;
+    font-size: 28px;
+}
+
+.flexbox-item-3 {
+    font-family: 'Staatliches', cursive;
+    min-height: 300px;
+    width: 300px;
+}
+
+.flexbox-item-4 {
+    align-items: flex-end;
+    min-height: 300px;
+    min-width: 300px;
+    flex: 1;
+    height: 400px;
+    border: 5px solid white;
+    padding: 15px;
+    font-family: 'Notable', sans-serif;
+}
+.another-container {
+    display: flex;
+    border: 5px solid #000000;
+    align-content: space-around;
+    padding: 40px;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 28px;
+}
+body {
+  background-color: #322e2f;
+}
+
+div {
+    display: block;
+}
+
+/*js file formatting*/
+canvas {
+    margin-top: 10px;
+    border: thin solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+
+}
